@@ -30,7 +30,11 @@
 	// }
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "bash ./startup.sh"
+	"postCreateCommand": "bash ./startup.sh",
+	"remoteEnv": {
+		"GIT_USER_NAME": "${localEnv:GIT_USER_NAME}",
+		"GIT_USER_EMAIL": "${localEnv:GIT_USER_EMAIL}"
+	}
 
 	// Configure tool-specific properties.
 	// "customizations": {},
